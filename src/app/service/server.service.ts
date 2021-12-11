@@ -13,7 +13,7 @@ export class ServerService {
   constructor(private http: HttpClient) { }
 
   servers$ = <Observable<never>>
-    this.http.get<CustomResponse>('${this.apiUrl}/server/list')
+    this.http.get<CustomResponse>(`${this.apiUrl}/server/list`)
       .pipe(
         tap(console.log),
         catchError(this.handleError)
