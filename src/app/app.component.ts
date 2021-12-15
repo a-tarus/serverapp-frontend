@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
   title = 'Server App';
 
   appState$: Observable<AppState<CustomResponse>>;
+  readonly DataState = DataState;
+
   constructor(private serverService: ServerService) { }
 
   ngOnInit(): void {
