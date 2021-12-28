@@ -44,8 +44,8 @@ export class ServerService {
               ...response,
               message: response.data.servers
                 .filter(server => server.status === status).length > 0 ? `Servers filtered by 
-              ${status === Status.SERVER_UP ? 'SERVER_UP' 
-              : 'SERVER_DOWN'} status` : `No servers of ${status} found`,
+        ${status === Status.SERVER_UP ? 'SERVER UP'
+                : 'SERVER DOWN'} status` : `No servers of ${status} found`,
               data: {
                 servers: response.data.servers
                   .filter(server => server.status === status)
